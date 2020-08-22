@@ -17,5 +17,8 @@ steps:
 
 - script: |
     npm install
+  displayName: 'npm install '
+
+- script: |
     npm run qa6
-  displayName: 'npm install and test'
+  displayName: 'npm test'
