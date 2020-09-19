@@ -35,22 +35,20 @@ describe('', () => {
   });
 
   ['student', 'learner'].forEach(el => {
-
-
-    it('should new user login', async function() {
+    it('should new user login', async function () {
       const response = await apiLogin(el);
 
-      console.log(response)
+      console.log(response);
 
       tokenUser = response.data.token;
       idUser = response.data.userId;
       roleUser = response.data.user.roles;
 
-      expect(tokenUser).to.be.a('string')
+      expect(tokenUser).to.be.a('string');
       expect(tokenUser).to.have.lengthOf.above(30);
     });
+  });
 
-  })
   it('should Update User role for new User to Learner', async function () {
     const response = await axios.patch(
       `${host}/user/${idUser}`,
@@ -74,7 +72,7 @@ describe('', () => {
   });
 });
 
-after('Should delete user', async () => {
+after('Should delete  my user', async () => {
   const res = await userDelete('newtest@qa4.us');
   expect(res.success).eq(true);
 });
