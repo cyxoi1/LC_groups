@@ -21,7 +21,6 @@ export const userDelete = async userEmail => {
 };
 
 /* to call the function in your tests After hook should be added similar to below
-
   after('Should delete a user', async () => {
   const res = await userDelete(userEmail); //where userEmail is the email of the user you want to delete
   expect(res.success).eq(true);
