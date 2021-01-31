@@ -12,7 +12,7 @@ describe('"Profile" contains Input Fields and IF named appropriate', () => {
   });
   it('check "Profile" is chosen from the menu ', function () {});
   it('TC-10-02 Verify that First Name input field named "First Name"', function () {
-    expect(settingsProfile.firstNameTitle)eq(expectedDate.profile.firstNameIF)
+    expect(settingsProfile.firstNameTitle).eq(expectedDate.profile.firstNameIF)
   });
   //ant-menu-item ant-menu-item-selected
 });
